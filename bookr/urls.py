@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import reviews.views
 
+"""Dont' use brackets after index --> index() because we aren't using a function, just a reference"""
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),\
+    path('', reviews.views.index)
 ]
