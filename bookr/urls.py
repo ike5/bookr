@@ -20,5 +20,11 @@ import reviews.views
 """Dont' use brackets after index --> index() because we aren't using a function, just a reference"""
 urlpatterns = [
     path('admin/', admin.site.urls),\
-    path('', reviews.views.index)
+    path('', reviews.views.index),\
+    path('fun/', reviews.views.fun),
+    path('a/', reviews.views.a),
+    path('b/', reviews.views.b),
+    path('c/', reviews.views.c),
+    path('d', reviews.views.d),
+
 ]
