@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
-# Todo: Move secrete keys into .env file in the future
+# Todo: Move secret keys into .env file in the future
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SKEY')
 
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'reviews',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True, # this will look for a templates directory inside of apps
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
