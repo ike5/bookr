@@ -21,10 +21,4 @@ import reviews.views
 urlpatterns = [
     path('admin/', admin.site.urls),\
     path('', reviews.views.index),\
-    path('fun/', reviews.views.fun),
-    path('a/', reviews.views.a),
-    path('b/', reviews.views.b),
-    path('c/', reviews.views.c),
-    path('d', reviews.views.d),
-
 ]
